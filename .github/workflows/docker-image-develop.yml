@@ -1,10 +1,10 @@
-name: ci
+name: ci-stable
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ccalliau/tb-back:latest, ccalliau/tb-back:${{github.run_number}}
+          tags: ccalliau/tb-back:latest-dev, ccalliau/tb-back:${{github.run_number}}
       - name: Update repo description
         uses: peter-evans/dockerhub-description@v3
         with:
