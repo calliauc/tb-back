@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Joueur_Match")
+@Table(name = "statut_joueur_equipe")
 public class StatutJoueurEquipe extends PanacheEntity {
 
     public String name;

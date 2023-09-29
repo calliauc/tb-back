@@ -17,12 +17,6 @@ public class JoueurRessource {
 
     @Inject
     JoueurRepo repository;
-    @GET
-    @Path("/hello")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello from RESTEasy Reactive";
-    }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -38,7 +32,6 @@ public class JoueurRessource {
                 .map(joueur -> joueur.name.toUpperCase())
                 .collect(Collectors.toList());
     }
-
 
     @GET
     @Path("/search")

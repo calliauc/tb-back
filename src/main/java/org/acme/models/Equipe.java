@@ -14,7 +14,7 @@ public class Equipe extends PanacheEntity {
     public Boolean isTemporaire;
     public Boolean isActive;
     @ManyToOne
-    @JoinColumn(name = "equipe_reference_id")
+    @JoinColumn(name = "equipe_id")
     public Equipe equipeReference;
 
 
